@@ -1,0 +1,37 @@
+# macOS cruft
+.DS_Store
+
+# Snakemake working directory
+.snakemake/
+
+# Python environment
+*.yaml.lock
+
+# Build artifacts & logs
+*.log
+__pycache__/
+*.py[cod]
+
+# Raw data (shapefiles, rasters, etc)
+data/
+*.tif
+*.shp
+*.dbf
+*.prj
+*.shx
+*.cpg
+*.nc
+
+# IDE/project files
+.vscode/
+*.idea/
+
+# Python cruft
+__pycache__/
+*.pyc
+
+submodules/
+
+models/**/*.n
+models/**/*.cs
+models/**/*.geojson
