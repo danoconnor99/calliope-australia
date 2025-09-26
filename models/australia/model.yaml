@@ -1,0 +1,46 @@
+import:
+  - interest-rate.yaml
+  - locations.yaml
+
+  - techs/demand/electricity.yaml
+  - techs/demand/electrified-heat.yaml
+
+  - techs/supply/ccgt.yaml
+  - techs/supply/coal.yaml
+  - techs/supply/electrified-biofuel.yaml
+  - techs/supply/geothermal.yaml
+  - techs/supply/historic-electrified-heat.yaml  # needed to avoid double counting heat demand
+  - techs/supply/hydro.yaml
+  # - techs/supply/nuclear.yaml
+  - techs/supply/oil.yaml
+  - techs/supply/open-field-solar-and-wind-onshore.yaml
+  - techs/supply/rooftop-solar.yaml
+  - techs/supply/waste.yaml
+  - techs/supply/wind-offshore.yaml
+
+  - techs/storage/electricity.yaml
+  - techs/storage/hydro.yaml
+
+  - techs/transmission/electricity-entsoe.yaml
+
+  # - techs/supply/load-shedding.yaml
+config:
+  init:
+    name: 'Model'
+    calliope_version: "0.7"
+    time_subset: ['2016', '2016']
+    time_resample: 6h
+  build:
+    mode: plan
+    pre_validate_math_strings: false
+    # add_math:
+    #   - additional-math.yaml
+    backend: gurobi
+  solve:
+    solver_options:
+      Threads: 4
+      Method: 2 # use barrier, but do not run simplex in parallel
+      Crossover: 0 # stop after barrier, do not perform crossover
+      FeasibilityTol: 1e-3
+      OptimalityTol: 1e-4
+      BarConvTol: 1e-4

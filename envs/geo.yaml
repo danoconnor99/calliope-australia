@@ -1,0 +1,13 @@
+channels:
+  - conda-forge
+dependencies:
+  - python = 3.12
+  - pandas = 2.3.0
+  - geopandas = 1.1.0
+  - pyarrow = 20.0.0
+  - pycountry = 24.6.1
+  - rasterio = 1.4.3
+  - rasterstats = 0.20.0
+  - cartopy = 0.24.0
+  - shapely = 2.1.1
+  - pyyaml = 6.0.2

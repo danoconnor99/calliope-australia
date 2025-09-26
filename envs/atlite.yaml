@@ -1,0 +1,14 @@
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - atlite
+  - geopandas
+  - pandas
+  - xarray
+  - dask
+  - netCDF4
+  - shapely
+  - fiona
+  - rtree
+  - pyproj

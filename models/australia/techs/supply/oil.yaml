@@ -1,0 +1,31 @@
+techs:
+  oil:
+    name: "Oil and other fossil fuels plant"
+    color: "#000000"
+    base_tech: supply
+    carrier_out: electricity
+    flow_out_eff: 0.35
+    flow_ramping: 0.6
+    lifetime: 35
+
+    cost_flow_cap:
+      data: 49.0      #10000 EUR2010/MW, assumed → overnight OCGT plant median
+      index: monetary
+      dims: costs
+
+    cost_flow_in:
+      data:
+        - 0.001 #10000 EUR2010/MWh
+        - 0.0027 # 10000 Mt CO2 / 100 GWh -> 100 MtCO2 / GWh -> 100 tCO2 / MWh
+      dims: [costs]
+      index: [monetary, emissions]
+
+    cost_flow_out:
+      data: 0.0023    #10000 EUR2010/MWh
+      index: monetary
+      dims: costs
+
+    cost_om_annual:
+      data: 3.2       #10000 EUR2010/MW/yr
+      index: monetary
+      dims: costs

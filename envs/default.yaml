@@ -1,0 +1,10 @@
+channels:
+  - conda-forge
+dependencies:
+  - python = 3.12
+  - pandas = 2.3.0
+  - pyarrow = 20.0.0
+  - pycountry = 24.6.1
+  - openpyxl = 3.1.5
+  - xarray
+  - netCDF4

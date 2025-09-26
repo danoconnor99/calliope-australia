@@ -1,0 +1,392 @@
+templates:
+  free_transmission:
+    name: 'Local power transmission'
+    template: interest_rate
+    base_tech: transmission
+    carrier_in: electricity
+    carrier_out: electricity
+  ac_transmission:
+    name: "High voltage AC transmission line"
+    template: free_transmission
+    flow_out_eff: 0.99999995 # (1/m)
+    lifetime: 60
+    # costs from [@JRC:2014], Table 39
+    cost_flow_cap_per_distance:
+      data: 9e-05 # (10,000 EUR2013/MW/m)
+      index: monetary
+      dims: costs
+    cost_om_annual_investment_fraction:
+      data: 0.015
+      index: monetary
+      dims: costs
+
+
+# Max net transfer capacity between countries according to the
+# following ENTSO-E ten-year network development plan 2020 scenario:
+# Scenario: National Trends
+# Case: Reference Grid
+# Year: 2040
+# Climate Year: 2007
+    
+
+techs:
+  link_AUT_CZE:
+    template: ac_transmission
+    link_from: AUT
+    link_to: CZE
+    flow_cap_min: 0.009000000000000001  # (100,000 MW)
+  link_AUT_DEU:
+    template: ac_transmission
+    link_from: AUT
+    link_to: DEU
+    flow_cap_min: 0.054000000000000006  # (100,000 MW)
+  link_AUT_HUN:
+    template: ac_transmission
+    link_from: AUT
+    link_to: HUN
+    flow_cap_min: 0.008  # (100,000 MW)
+  link_AUT_ITA:
+    template: ac_transmission
+    link_from: AUT
+    link_to: ITA
+    flow_cap_min: 0.0068000000000000005  # (100,000 MW)
+  link_AUT_SVN:
+    template: ac_transmission
+    link_from: AUT
+    link_to: SVN
+    flow_cap_min: 0.009500000000000001  # (100,000 MW)
+  link_AUT_CHE:
+    template: ac_transmission
+    link_from: AUT
+    link_to: CHE
+    flow_cap_min: 0.012  # (100,000 MW)
+  link_BEL_FRA:
+    template: ac_transmission
+    link_from: BEL
+    link_to: FRA
+    flow_cap_min: 0.043000000000000003  # (100,000 MW)
+  link_BEL_DEU:
+    template: ac_transmission
+    link_from: BEL
+    link_to: DEU
+    flow_cap_min: 0.01  # (100,000 MW)
+  link_BEL_LUX:
+    template: ac_transmission
+    link_from: BEL
+    link_to: LUX
+    flow_cap_min: 0.0068000000000000005  # (100,000 MW)
+  link_BEL_NLD:
+    template: ac_transmission
+    link_from: BEL
+    link_to: NLD
+    flow_cap_min: 0.024  # (100,000 MW)
+  link_BEL_GBR:
+    template: ac_transmission
+    link_from: BEL
+    link_to: GBR
+    flow_cap_min: 0.01  # (100,000 MW)
+  link_BGR_GRC:
+    template: ac_transmission
+    link_from: BGR
+    link_to: GRC
+    flow_cap_min: 0.013500000000000002  # (100,000 MW)
+  link_BGR_ROU:
+    template: ac_transmission
+    link_from: BGR
+    link_to: ROU
+    flow_cap_min: 0.012  # (100,000 MW)
+  link_BGR_MKD:
+    template: ac_transmission
+    link_from: BGR
+    link_to: MKD
+    flow_cap_min: 0.005  # (100,000 MW)
+  link_BGR_SRB:
+    template: ac_transmission
+    link_from: BGR
+    link_to: SRB
+    flow_cap_min: 0.004  # (100,000 MW)
+  link_HRV_HUN:
+    template: ac_transmission
+    link_from: HRV
+    link_to: HUN
+    flow_cap_min: 0.017  # (100,000 MW)
+  link_HRV_SVN:
+    template: ac_transmission
+    link_from: HRV
+    link_to: SVN
+    flow_cap_min: 0.02  # (100,000 MW)
+  link_HRV_SRB:
+    template: ac_transmission
+    link_from: HRV
+    link_to: SRB
+    flow_cap_min: 0.005  # (100,000 MW)
+  link_CZE_DEU:
+    template: ac_transmission
+    link_from: CZE
+    link_to: DEU
+    flow_cap_min: 0.021  # (100,000 MW)
+  link_CZE_POL:
+    template: ac_transmission
+    link_from: CZE
+    link_to: POL
+    flow_cap_min: 0.008  # (100,000 MW)
+  link_CZE_SVK:
+    template: ac_transmission
+    link_from: CZE
+    link_to: SVK
+    flow_cap_min: 0.018000000000000002  # (100,000 MW)
+  link_DNK_NLD:
+    template: ac_transmission
+    link_from: DNK
+    link_to: NLD
+    flow_cap_min: 0.007  # (100,000 MW)
+  link_DNK_SWE:
+    template: ac_transmission
+    link_from: DNK
+    link_to: SWE
+    flow_cap_min: 0.0244  # (100,000 MW)
+  link_DNK_GBR:
+    template: ac_transmission
+    link_from: DNK
+    link_to: GBR
+    flow_cap_min: 0.014  # (100,000 MW)
+  link_DNK_NOR:
+    template: ac_transmission
+    link_from: DNK
+    link_to: NOR
+    flow_cap_min: 0.0164  # (100,000 MW)
+  link_EST_FIN:
+    template: ac_transmission
+    link_from: EST
+    link_to: FIN
+    flow_cap_min: 0.01016  # (100,000 MW)
+  link_EST_LVA:
+    template: ac_transmission
+    link_from: EST
+    link_to: LVA
+    flow_cap_min: 0.011000000000000001  # (100,000 MW)
+  link_FIN_SWE:
+    template: ac_transmission
+    link_from: FIN
+    link_to: SWE
+    flow_cap_min: 0.032  # (100,000 MW)
+  link_FRA_ITA:
+    template: ac_transmission
+    link_from: FRA
+    link_to: ITA
+    flow_cap_min: 0.0412  # (100,000 MW)
+  link_FRA_LUX:
+    template: ac_transmission
+    link_from: FRA
+    link_to: LUX
+    flow_cap_min: 0.0038000000000000004  # (100,000 MW)
+  link_FRA_GBR:
+    template: ac_transmission
+    link_from: FRA
+    link_to: GBR
+    flow_cap_min: 0.04  # (100,000 MW)
+  link_DEU_DNK:
+    template: ac_transmission
+    link_from: DEU
+    link_to: DNK
+    flow_cap_min: 0.045000000000000005  # (100,000 MW)
+  link_DEU_FRA:
+    template: ac_transmission
+    link_from: DEU
+    link_to: FRA
+    flow_cap_min: 0.030000000000000002  # (100,000 MW)
+  link_DEU_LUX:
+    template: ac_transmission
+    link_from: DEU
+    link_to: LUX
+    flow_cap_min: 0.023000000000000003  # (100,000 MW)
+  link_DEU_NLD:
+    template: ac_transmission
+    link_from: DEU
+    link_to: NLD
+    flow_cap_min: 0.05  # (100,000 MW)
+  link_DEU_POL:
+    template: ac_transmission
+    link_from: DEU
+    link_to: POL
+    flow_cap_min: 0.030000000000000002  # (100,000 MW)
+  link_DEU_SWE:
+    template: ac_transmission
+    link_from: DEU
+    link_to: SWE
+    flow_cap_min: 0.00615  # (100,000 MW)
+  link_DEU_GBR:
+    template: ac_transmission
+    link_from: DEU
+    link_to: GBR
+    flow_cap_min: 0.014  # (100,000 MW)
+  link_DEU_NOR:
+    template: ac_transmission
+    link_from: DEU
+    link_to: NOR
+    flow_cap_min: 0.014  # (100,000 MW)
+  link_GRC_ITA:
+    template: ac_transmission
+    link_from: GRC
+    link_to: ITA
+    flow_cap_min: 0.005  # (100,000 MW)
+  link_GRC_MKD:
+    template: ac_transmission
+    link_from: GRC
+    link_to: MKD
+    flow_cap_min: 0.011000000000000001  # (100,000 MW)
+  link_HUN_ROU:
+    template: ac_transmission
+    link_from: HUN
+    link_to: ROU
+    flow_cap_min: 0.011000000000000001  # (100,000 MW)
+  link_HUN_SVK:
+    template: ac_transmission
+    link_from: HUN
+    link_to: SVK
+    flow_cap_min: 0.026000000000000002  # (100,000 MW)
+  link_HUN_SVN:
+    template: ac_transmission
+    link_from: HUN
+    link_to: SVN
+    flow_cap_min: 0.012  # (100,000 MW)
+  link_HUN_SRB:
+    template: ac_transmission
+    link_from: HUN
+    link_to: SRB
+    flow_cap_min: 0.006  # (100,000 MW)
+  link_IRL_GBR:
+    template: ac_transmission
+    link_from: IRL
+    link_to: GBR
+    flow_cap_min: 0.0175  # (100,000 MW)
+  link_ITA_SVN:
+    template: ac_transmission
+    link_from: ITA
+    link_to: SVN
+    flow_cap_min: 0.006500000000000001  # (100,000 MW)
+  link_ITA_MNE:
+    template: ac_transmission
+    link_from: ITA
+    link_to: MNE
+    flow_cap_min: 0.006  # (100,000 MW)
+  link_LTU_LVA:
+    template: ac_transmission
+    link_from: LTU
+    link_to: LVA
+    flow_cap_min: 0.009500000000000001  # (100,000 MW)
+  link_LTU_POL:
+    template: ac_transmission
+    link_from: LTU
+    link_to: POL
+    flow_cap_min: 0.007  # (100,000 MW)
+  link_LTU_SWE:
+    template: ac_transmission
+    link_from: LTU
+    link_to: SWE
+    flow_cap_min: 0.007  # (100,000 MW)
+  link_NLD_GBR:
+    template: ac_transmission
+    link_from: NLD
+    link_to: GBR
+    flow_cap_min: 0.01  # (100,000 MW)
+  link_NLD_NOR:
+    template: ac_transmission
+    link_from: NLD
+    link_to: NOR
+    flow_cap_min: 0.007  # (100,000 MW)
+  link_POL_SVK:
+    template: ac_transmission
+    link_from: POL
+    link_to: SVK
+    flow_cap_min: 0.0099  # (100,000 MW)
+  link_POL_SWE:
+    template: ac_transmission
+    link_from: POL
+    link_to: SWE
+    flow_cap_min: 0.006  # (100,000 MW)
+  link_ROU_SRB:
+    template: ac_transmission
+    link_from: ROU
+    link_to: SRB
+    flow_cap_min: 0.01  # (100,000 MW)
+  link_ESP_FRA:
+    template: ac_transmission
+    link_from: ESP
+    link_to: FRA
+    flow_cap_min: 0.05  # (100,000 MW)
+  link_ESP_PRT:
+    template: ac_transmission
+    link_from: ESP
+    link_to: PRT
+    flow_cap_min: 0.042  # (100,000 MW)
+  link_ALB_GRC:
+    template: ac_transmission
+    link_from: ALB
+    link_to: GRC
+    flow_cap_min: 0.0025  # (100,000 MW)
+  link_ALB_MKD:
+    template: ac_transmission
+    link_from: ALB
+    link_to: MKD
+    flow_cap_min: 0.005  # (100,000 MW)
+  link_ALB_MNE:
+    template: ac_transmission
+    link_from: ALB
+    link_to: MNE
+    flow_cap_min: 0.0035  # (100,000 MW)
+  link_ALB_SRB:
+    template: ac_transmission
+    link_from: ALB
+    link_to: SRB
+    flow_cap_min: 0.006500000000000001  # (100,000 MW)
+  link_BIH_HRV:
+    template: ac_transmission
+    link_from: BIH
+    link_to: HRV
+    flow_cap_min: 0.007500000000000001  # (100,000 MW)
+  link_BIH_MNE:
+    template: ac_transmission
+    link_from: BIH
+    link_to: MNE
+    flow_cap_min: 0.008  # (100,000 MW)
+  link_BIH_SRB:
+    template: ac_transmission
+    link_from: BIH
+    link_to: SRB
+    flow_cap_min: 0.006  # (100,000 MW)
+  link_MKD_SRB:
+    template: ac_transmission
+    link_from: MKD
+    link_to: SRB
+    flow_cap_min: 0.006500000000000001  # (100,000 MW)
+  link_MNE_SRB:
+    template: ac_transmission
+    link_from: MNE
+    link_to: SRB
+    flow_cap_min: 0.006  # (100,000 MW)
+  link_NOR_SWE:
+    template: ac_transmission
+    link_from: NOR
+    link_to: SWE
+    flow_cap_min: 0.039950000000000006  # (100,000 MW)
+  link_NOR_GBR:
+    template: ac_transmission
+    link_from: NOR
+    link_to: GBR
+    flow_cap_min: 0.028  # (100,000 MW)
+  link_CHE_FRA:
+    template: ac_transmission
+    link_from: CHE
+    link_to: FRA
+    flow_cap_min: 0.037000000000000005  # (100,000 MW)
+  link_CHE_DEU:
+    template: ac_transmission
+    link_from: CHE
+    link_to: DEU
+    flow_cap_min: 0.046000000000000006  # (100,000 MW)
+  link_CHE_ITA:
+    template: ac_transmission
+    link_from: CHE
+    link_to: ITA
+    flow_cap_min: 0.037500000000000006  # (100,000 MW)

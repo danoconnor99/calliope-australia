@@ -1,0 +1,9 @@
+module_geo_boundaries:
+  buffer: 500
+  crs:
+    projected: "epsg:3577"
+    geographic: "epsg:4326"
+  countries:
+    AUS:
+      source: gadm
+      subtype: "1"

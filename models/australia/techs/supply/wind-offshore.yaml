@@ -1,0 +1,183 @@
+techs:
+  wind_offshore:  # from [@JRC:2014] Table 5
+    name: Offshore wind
+    template: interest_rate
+    carrier_out: electricity
+    base_tech: supply
+    source_unit: per_cap
+    lifetime: 30
+    cost_flow_cap:
+      data: 228.0 # (10,000 EUR2013/MW)
+      index: monetary
+      dims: costs
+    cost_om_annual:
+      data: 4.8740652 # (10,000 EUR2013/MW) 2.3% of CAPEX
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.0001 # (10,000 EUR2013/MW) stolen from om_annual for technical reasons
+      index: monetary
+      dims: costs
+
+overrides:
+  dea_renewable_cost_wind_offshore: # from [@DEA:2020a]
+    techs.wind_offshore: # Sheet 21 Offshore Turbines (last updated 2019)
+      lifetime: 30
+      cost_flow_cap:
+        data: 177.70000000000002 # (10,000 EUR2015/MW)
+        index: monetary
+        dims: costs
+      cost_om_annual:
+        data: 2.8748652000000003 # (10,000 EUR2015/MW/year)
+        index: monetary
+        dims: costs
+      cost_flow_out:
+        data: 0.0001 # (10,000 EUR2015/MW) stolen from om_annual for technical reasons
+        index: monetary
+        dims: costs
+
+data_tables:
+  capacityfactors_wind_offshore:
+    data: timeseries/supply/capacityfactors-wind-offshore.csv
+    rows: timesteps
+    columns: nodes
+    add_dims:
+      techs: wind_offshore
+      parameters: source_use_max
+nodes:
+  AUT:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.0 # (100,000 MW)
+  BEL:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.5215218820005656 # (100,000 MW)
+  BGR:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.8078935140497984 # (100,000 MW)
+  HRV:
+    techs:
+      wind_offshore:
+        flow_cap_max: 2.7463269889388235 # (100,000 MW)
+  CYP:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.19781025953851641 # (100,000 MW)
+  CZE:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.0 # (100,000 MW)
+  DNK:
+    techs:
+      wind_offshore:
+        flow_cap_max: 12.505471905986779 # (100,000 MW)
+  EST:
+    techs:
+      wind_offshore:
+        flow_cap_max: 3.2112658414000648 # (100,000 MW)
+  FIN:
+    techs:
+      wind_offshore:
+        flow_cap_max: 7.103294103910961 # (100,000 MW)
+  FRA:
+    techs:
+      wind_offshore:
+        flow_cap_max: 8.175501440985874 # (100,000 MW)
+  DEU:
+    techs:
+      wind_offshore:
+        flow_cap_max: 8.400318405247853 # (100,000 MW)
+  GRC:
+    techs:
+      wind_offshore:
+        flow_cap_max: 3.605109164083377 # (100,000 MW)
+  HUN:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.0 # (100,000 MW)
+  IRL:
+    techs:
+      wind_offshore:
+        flow_cap_max: 3.012503816735186 # (100,000 MW)
+  ITA:
+    techs:
+      wind_offshore:
+        flow_cap_max: 6.013381166410447 # (100,000 MW)
+  LVA:
+    techs:
+      wind_offshore:
+        flow_cap_max: 2.2942397450041025 # (100,000 MW)
+  LTU:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.5128136919965969 # (100,000 MW)
+  LUX:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.0 # (100,000 MW)
+  NLD:
+    techs:
+      wind_offshore:
+        flow_cap_max: 9.561430872757361 # (100,000 MW)
+  POL:
+    techs:
+      wind_offshore:
+        flow_cap_max: 2.34226524158176 # (100,000 MW)
+  PRT:
+    techs:
+      wind_offshore:
+        flow_cap_max: 1.0445536686915906 # (100,000 MW)
+  ROU:
+    techs:
+      wind_offshore:
+        flow_cap_max: 1.3373956569392236 # (100,000 MW)
+  SVK:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.0 # (100,000 MW)
+  SVN:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.030750442482903602 # (100,000 MW)
+  ESP:
+    techs:
+      wind_offshore:
+        flow_cap_max: 3.729029206087813 # (100,000 MW)
+  SWE:
+    techs:
+      wind_offshore:
+        flow_cap_max: 10.590910221924261 # (100,000 MW)
+  GBR:
+    techs:
+      wind_offshore:
+        flow_cap_max: 23.888991603307243 # (100,000 MW)
+  ALB:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.294895541138202 # (100,000 MW)
+  BIH:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.0015643236011266713 # (100,000 MW)
+  MKD:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.0 # (100,000 MW)
+  MNE:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.05317244579494001 # (100,000 MW)
+  NOR:
+    techs:
+      wind_offshore:
+        flow_cap_max: 8.203130604333804 # (100,000 MW)
+  SRB:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.0 # (100,000 MW)
+  CHE:
+    techs:
+      wind_offshore:
+        flow_cap_max: 0.0 # (100,000 MW)

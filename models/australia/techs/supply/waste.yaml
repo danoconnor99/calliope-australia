@@ -1,0 +1,30 @@
+techs:
+  waste:
+    name: "Waste to energy plant"
+    color: "#6A0241"
+    base_tech: supply
+    carrier_out: electricity
+    flow_out_eff: 0.28
+    lifetime: 20
+
+    cost_flow_cap:
+      data: 374.3      #10000 EUR2010/MW, from RSE 2015 estimates for electric-only
+      index: monetary
+      dims: costs
+
+    cost_om_annual:
+      data: 34.8       #10000 EUR2010/MW/yr
+      index: monetary
+      dims: costs
+
+    cost_flow_in:
+      data:
+        - -0.01305 #10000 EUR2010/MWh
+        - 0.0034  # 100tCO2/MWh
+      dims: [costs]
+      index: [monetary, emissions]
+
+    cost_flow_out:
+      data: 0.003305   #10000 EUR2010/MWh
+      index: monetary
+      dims: costs

@@ -1,0 +1,508 @@
+techs:
+  hydro_run_of_river:  # from [@JRC:2014] Table 14
+    name: Run of river hydro electricity
+    template: interest_rate
+    base_tech: supply
+    carrier_out: electricity
+    source_unit: per_cap
+    lifetime: 60
+    cost_flow_cap:
+      data: 562.0 # (10,000 EUR2013/MW)
+      index: monetary
+      dims: costs
+    cost_om_annual:
+      data: 16.86 # (10,000 EUR2013/MW) 3% of CAPEX
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.0005 # (10,000 EUR2013/MW)
+      index: monetary
+      dims: costs
+  hydro_reservoir:  # from [@JRC:2014] Table 12
+    name: Hydro electricity with a reservoir.
+    template: interest_rate
+    base_tech: supply
+    carrier_out: electricity
+    source_unit: per_cap
+    include_storage: true
+    lifetime: 60
+    cost_flow_cap:
+      data: 337.0 # (10,000 EUR2013/MW)
+      index: monetary
+      dims: costs
+    cost_om_annual:
+      data: 10.110000000000001 # (10,000 EUR2013/MW) 3% of CAPEX
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.0005 #  (10,000 EUR2013/MW)
+      index: monetary
+      dims: costs
+
+data_tables:
+  capacityfactors_hydro_run_of_river:
+    data: timeseries/supply/capacityfactors-hydro-run-of-river.csv
+    rows: timesteps
+    columns: nodes
+    add_dims:
+      techs: hydro_run_of_river
+      parameters: source_use_max
+  capacityfactors_hydro_reservoir:
+    data: timeseries/supply/capacityfactors-hydro-reservoir.csv
+    rows: timesteps
+    columns: nodes
+    add_dims:
+      techs: hydro_reservoir
+      parameters: source_use_max
+
+overrides:
+  no_hydro_supply_fixed_cost:
+    # Only assign costs to O&M and variable costs
+    techs.hydro_run_of_river:
+      cost_flow_cap.data: 0
+    techs.hydro_reservoir:
+      cost_flow_cap.data: 0
+
+  schroeder_hydro_cost: # from [@schroeder:2013]
+    techs:
+      hydro_run_of_river:
+        lifetime: 60
+        cost_flow_cap:
+          data: 300.0 # (10,000 EUR2010/MW) Table 33
+          index: monetary
+          dims: costs
+        cost_om_annual:
+          data: 5.529779844 # (10,000 EUR2010/MW) Table 34
+          index: monetary
+          dims: costs
+        cost_flow_out:
+          data: 0.0001 # (10,000 EUR2010/MW) stolen from om_annual for technical reasons
+          index: monetary
+          dims: costs
+      hydro_reservoir:
+        lifetime: 60
+        cost_flow_cap:
+          data: 200.0 # (10,000 EUR2010/MW) Table 33
+          index: monetary
+          dims: costs
+        cost_om_annual:
+          data: 1.529779844 # (10,000 EUR2010/MW) Table 34
+          index: monetary
+          dims: costs
+        cost_flow_out:
+          data: 0.0001 # (10,000 EUR2010/MW) stolen from om_annual for technical reasons
+          index: monetary
+          dims: costs
+
+  freeze_hydro_supply_capacities:
+    nodes:
+      AUT.techs: # AUT
+        hydro_run_of_river:
+          flow_cap_min: 0.044136168682581085 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.05239920000000001 # (100,000 MW)
+          storage_cap_min: 31.836157366070516 # (100,000 MWh)
+      BEL.techs: # BEL
+        hydro_run_of_river:
+          flow_cap_min: 0.0005901533974257917 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.0001273566878980889 # (100,000 MW)
+          storage_cap_min: 0.10511980588413689 # (100,000 MWh)
+      BGR.techs: # BGR
+        hydro_run_of_river:
+          flow_cap_min: 0.000224 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.0149954 # (100,000 MW)
+          storage_cap_min: 12.377155555555555 # (100,000 MWh)
+      HRV.techs: # HRV
+        hydro_run_of_river:
+          flow_cap_min: 0.0027866773029167685 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.013276244585987267 # (100,000 MW)
+          storage_cap_min: 10.958170134465679 # (100,000 MWh)
+      CYP.techs: # CYP
+        hydro_run_of_river:
+          flow_cap_min: 0.0 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.0 # (100,000 MW)
+          storage_cap_min: 0.0 # (100,000 MWh)
+      CZE.techs: # CZE
+        hydro_run_of_river:
+          flow_cap_min: 0.00040226382271496005 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.007114839022845104 # (100,000 MW)
+          storage_cap_min: 5.872565542665799 # (100,000 MWh)
+      DNK.techs: # DNK
+        hydro_run_of_river:
+          flow_cap_min: 0.0 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.0 # (100,000 MW)
+          storage_cap_min: 0.0 # (100,000 MWh)
+      EST.techs: # EST
+        hydro_run_of_river:
+          flow_cap_min: 0.0 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.0 # (100,000 MW)
+          storage_cap_min: 0.0 # (100,000 MWh)
+      FIN.techs: # FIN
+        hydro_run_of_river:
+          flow_cap_min: 0.013409500000000001 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.013450000000000002 # (100,000 MW)
+          storage_cap_min: 11.101587301587303 # (100,000 MWh)
+      FRA.techs: # FRA
+        hydro_run_of_river:
+          flow_cap_min: 0.06319332562490508 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.09469638216560511 # (100,000 MW)
+          storage_cap_min: 91.08375383572465 # (100,000 MWh)
+      DEU.techs: # DEU
+        hydro_run_of_river:
+          flow_cap_min: 0.03592895549999997 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.0020280000000000003 # (100,000 MW)
+          storage_cap_min: 1.574419218703742 # (100,000 MWh)
+      GRC.techs: # GRC
+        hydro_run_of_river:
+          flow_cap_min: 0.00110315 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.025862 # (100,000 MW)
+          storage_cap_min: 19.12857142857143 # (100,000 MWh)
+      HUN.techs: # HUN
+        hydro_run_of_river:
+          flow_cap_min: 0.00019700000000000002 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.00028000000000000003 # (100,000 MW)
+          storage_cap_min: 0.2311111111111112 # (100,000 MWh)
+      IRL.techs: # IRL
+        hydro_run_of_river:
+          flow_cap_min: 0.00216 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 1e-05 # (100,000 MW)
+          storage_cap_min: 0.008253968253968255 # (100,000 MWh)
+      ITA.techs: # ITA
+        hydro_run_of_river:
+          flow_cap_min: 0.0590196 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.05528240000000001 # (100,000 MW)
+          storage_cap_min: 45.629917460317465 # (100,000 MWh)
+      LVA.techs: # LVA
+        hydro_run_of_river:
+          flow_cap_min: 0.0064210000000000005 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.00884 # (100,000 MW)
+          storage_cap_min: 0.46330000000000005 # (100,000 MWh)
+      LTU.techs: # LTU
+        hydro_run_of_river:
+          flow_cap_min: 0.0 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.00101 # (100,000 MW)
+          storage_cap_min: 0.8336507936507938 # (100,000 MWh)
+      LUX.techs: # LUX
+        hydro_run_of_river:
+          flow_cap_min: 0.0 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.0 # (100,000 MW)
+          storage_cap_min: 0.0 # (100,000 MWh)
+      NLD.techs: # NLD
+        hydro_run_of_river:
+          flow_cap_min: 0.0 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.0 # (100,000 MW)
+          storage_cap_min: 0.0 # (100,000 MWh)
+      POL.techs: # POL
+        hydro_run_of_river:
+          flow_cap_min: 0.00014400368779543974 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.004125063694267516 # (100,000 MW)
+          storage_cap_min: 0.026902589310440324 # (100,000 MWh)
+      PRT.techs: # PRT
+        hydro_run_of_river:
+          flow_cap_min: 0.016155000000000003 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.013354000000000001 # (100,000 MW)
+          storage_cap_min: 18.16778112843215 # (100,000 MWh)
+      ROU.techs: # ROU
+        hydro_run_of_river:
+          flow_cap_min: 0.0087045 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.052734801273885364 # (100,000 MW)
+          storage_cap_min: 43.527137559397445 # (100,000 MWh)
+      SVK.techs: # SVK
+        hydro_run_of_river:
+          flow_cap_min: 0.006464900000000002 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.008044 # (100,000 MW)
+          storage_cap_min: 6.639492063492065 # (100,000 MWh)
+      SVN.techs: # SVN
+        hydro_run_of_river:
+          flow_cap_min: 0.004514150000000001 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.0060219 # (100,000 MW)
+          storage_cap_min: 4.970457142857143 # (100,000 MWh)
+      ESP.techs: # ESP
+        hydro_run_of_river:
+          flow_cap_min: 0.0014700824749999987 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.08364235000000002 # (100,000 MW)
+          storage_cap_min: 81.41594275164846 # (100,000 MWh)
+      SWE.techs: # SWE
+        hydro_run_of_river:
+          flow_cap_min: 0.019950000000000002 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.11670763516863038 # (100,000 MW)
+          storage_cap_min: 97.35957036140925 # (100,000 MWh)
+      GBR.techs: # GBR
+        hydro_run_of_river:
+          flow_cap_min: 0.008484750000000001 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.005240000000000001 # (100,000 MW)
+          storage_cap_min: 4.3250793650793655 # (100,000 MWh)
+      ALB.techs: # ALB
+        hydro_run_of_river:
+          flow_cap_min: 0.00394766 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.017602000000000003 # (100,000 MW)
+          storage_cap_min: 15.189436861111114 # (100,000 MWh)
+      BIH.techs: # BIH
+        hydro_run_of_river:
+          flow_cap_min: 0.0009600000000000001 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.015695 # (100,000 MW)
+          storage_cap_min: 0.029537795031055906 # (100,000 MWh)
+      MKD.techs: # MKD
+        hydro_run_of_river:
+          flow_cap_min: 0.00041600000000000003 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.00449 # (100,000 MW)
+          storage_cap_min: 3.7060317460317465 # (100,000 MWh)
+      MNE.techs: # MNE
+        hydro_run_of_river:
+          flow_cap_min: 0.0031236000000000002 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.0036296100000000006 # (100,000 MW)
+          storage_cap_min: 3.547481033434651 # (100,000 MWh)
+      NOR.techs: # NOR
+        hydro_run_of_river:
+          flow_cap_min: 0.0 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.29091050000000007 # (100,000 MW)
+          storage_cap_min: 414.58208470714305 # (100,000 MWh)
+      SRB.techs: # SRB
+        hydro_run_of_river:
+          flow_cap_min: 0.00215 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.018753000000000002 # (100,000 MW)
+          storage_cap_min: 7.841607808171745 # (100,000 MWh)
+      CHE.techs: # CHE
+        hydro_run_of_river:
+          flow_cap_min: 0.040842798000000013 # (100,000 MW)
+        hydro_reservoir:
+          flow_cap_min: 0.09127930000000005 # (100,000 MW)
+          storage_cap_min: 22.83602043579628 # (100,000 MWh)
+
+nodes:
+  AUT.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.044136168682581085 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.05239920000000001 # (100,000 MW)
+      storage_cap_max: 31.836157366070516 # (100,000 MWh)
+  BEL.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0005901533974257917 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.0001273566878980889 # (100,000 MW)
+      storage_cap_max: 0.10511980588413689 # (100,000 MWh)
+  BGR.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.000224 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.0149954 # (100,000 MW)
+      storage_cap_max: 12.377155555555555 # (100,000 MWh)
+  HRV.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0027866773029167685 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.013276244585987267 # (100,000 MW)
+      storage_cap_max: 10.958170134465679 # (100,000 MWh)
+  CYP.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.0 # (100,000 MW)
+      storage_cap_max: 0.0 # (100,000 MWh)
+  CZE.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.00040226382271496005 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.007114839022845104 # (100,000 MW)
+      storage_cap_max: 5.872565542665799 # (100,000 MWh)
+  DNK.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.0 # (100,000 MW)
+      storage_cap_max: 0.0 # (100,000 MWh)
+  EST.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.0 # (100,000 MW)
+      storage_cap_max: 0.0 # (100,000 MWh)
+  FIN.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.013409500000000001 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.013450000000000002 # (100,000 MW)
+      storage_cap_max: 11.101587301587303 # (100,000 MWh)
+  FRA.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.06319332562490508 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.09469638216560511 # (100,000 MW)
+      storage_cap_max: 91.08375383572465 # (100,000 MWh)
+  DEU.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.03592895549999997 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.0020280000000000003 # (100,000 MW)
+      storage_cap_max: 1.574419218703742 # (100,000 MWh)
+  GRC.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.00110315 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.025862 # (100,000 MW)
+      storage_cap_max: 19.12857142857143 # (100,000 MWh)
+  HUN.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.00019700000000000002 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.00028000000000000003 # (100,000 MW)
+      storage_cap_max: 0.2311111111111112 # (100,000 MWh)
+  IRL.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.00216 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 1e-05 # (100,000 MW)
+      storage_cap_max: 0.008253968253968255 # (100,000 MWh)
+  ITA.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0590196 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.05528240000000001 # (100,000 MW)
+      storage_cap_max: 45.629917460317465 # (100,000 MWh)
+  LVA.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0064210000000000005 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.00884 # (100,000 MW)
+      storage_cap_max: 0.46330000000000005 # (100,000 MWh)
+  LTU.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.00101 # (100,000 MW)
+      storage_cap_max: 0.8336507936507938 # (100,000 MWh)
+  LUX.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.0 # (100,000 MW)
+      storage_cap_max: 0.0 # (100,000 MWh)
+  NLD.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.0 # (100,000 MW)
+      storage_cap_max: 0.0 # (100,000 MWh)
+  POL.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.00014400368779543974 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.004125063694267516 # (100,000 MW)
+      storage_cap_max: 0.026902589310440324 # (100,000 MWh)
+  PRT.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.016155000000000003 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.013354000000000001 # (100,000 MW)
+      storage_cap_max: 18.16778112843215 # (100,000 MWh)
+  ROU.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0087045 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.052734801273885364 # (100,000 MW)
+      storage_cap_max: 43.527137559397445 # (100,000 MWh)
+  SVK.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.006464900000000002 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.008044 # (100,000 MW)
+      storage_cap_max: 6.639492063492065 # (100,000 MWh)
+  SVN.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.004514150000000001 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.0060219 # (100,000 MW)
+      storage_cap_max: 4.970457142857143 # (100,000 MWh)
+  ESP.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0014700824749999987 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.08364235000000002 # (100,000 MW)
+      storage_cap_max: 81.41594275164846 # (100,000 MWh)
+  SWE.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.019950000000000002 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.11670763516863038 # (100,000 MW)
+      storage_cap_max: 97.35957036140925 # (100,000 MWh)
+  GBR.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.008484750000000001 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.005240000000000001 # (100,000 MW)
+      storage_cap_max: 4.3250793650793655 # (100,000 MWh)
+  ALB.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.00394766 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.017602000000000003 # (100,000 MW)
+      storage_cap_max: 15.189436861111114 # (100,000 MWh)
+  BIH.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0009600000000000001 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.015695 # (100,000 MW)
+      storage_cap_max: 0.029537795031055906 # (100,000 MWh)
+  MKD.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.00041600000000000003 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.00449 # (100,000 MW)
+      storage_cap_max: 3.7060317460317465 # (100,000 MWh)
+  MNE.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0031236000000000002 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.0036296100000000006 # (100,000 MW)
+      storage_cap_max: 3.547481033434651 # (100,000 MWh)
+  NOR.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.0 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.29091050000000007 # (100,000 MW)
+      storage_cap_max: 414.58208470714305 # (100,000 MWh)
+  SRB.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.00215 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.018753000000000002 # (100,000 MW)
+      storage_cap_max: 7.841607808171745 # (100,000 MWh)
+  CHE.techs:
+    hydro_run_of_river:
+      flow_cap_max: 0.040842798000000013 # (100,000 MW)
+    hydro_reservoir:
+      flow_cap_max: 0.09127930000000005 # (100,000 MW)
+      storage_cap_max: 22.83602043579628 # (100,000 MWh)

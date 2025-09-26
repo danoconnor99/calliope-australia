@@ -1,0 +1,24 @@
+name: calliope
+channels:
+  - conda-forge/label/calliope_dev
+  - conda-forge
+  - gurobi
+dependencies:
+  - python=3.11
+  - pandas=2.1.4
+  - numpy=1.26.4
+  - xarray=2024.2.0
+  - netCDF4=1.6.5
+  - hdf5=1.14.2
+  - libnetcdf=4.9.2
+  - calliope=0.7.0dev6
+  - pyomo=6.8.2
+  - gurobi=12.0.3
+  - matplotlib
+  - seaborn
+  - nbformat
+  - jupyter
+  - pip=25.1.1
+  - pip:
+      - git+https://github.com/calliope-project/calligraph.git@v0.1.1.dev6
+      - git+https://github.com/calliope-project/calliope-pathways.git@update-ppm-parsing

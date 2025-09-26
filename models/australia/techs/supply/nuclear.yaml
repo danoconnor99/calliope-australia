@@ -1,0 +1,48 @@
+# There is ambiguity in the costs and operating characteristics for nuclear power plants in the literature.
+# The values we use here are based on averaging data from [Wealer:2019,IEA:2020,Barkatullah:2017].
+# Another available source not used here is [BEIS:2016]. It has similar values,
+# but tends towards being more optimistic in some areas (longer technology lifetime, higher average capacity factor, lower O&M costs)
+# and less optimistic in others (higher investment and annual O&M cost range)
+techs:
+  nuclear:
+    name: Nuclear power
+    template: interest_rate
+    carrier_out: electricity
+    base_tech: supply
+    flow_out_eff: 0.4
+    lifetime: 50  # average of 40 [Wealer:2019] and 60 [IEA:2020]
+    flow_out_min_relative: 0.8  # average of 0.75 [Wealer:2019] and 0.85 [IEA:2020]
+    cost_flow_cap:
+      data: 367.20000000000005  # (10,000 EUR2015/MW)
+      index: monetary
+      dims: costs
+    cost_om_annual:
+      data: 7.6116  # (10,000 EUR2015/MW/year)
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data:  0.001  # (10,000 EUR2015/MWh) | ASSUME: fuel costs given by [IEA:2020,Barkatullah:2017] are per MWh electricity produced, not MWh available energy in the input fuel.
+      index: monetary
+      dims: costs
+
+data_tables:
+  nuclear_min_max:
+    data: ../../build/data_tables/nuclear_capacities.csv
+    rows: nodes
+    columns: [investsteps, parameters]
+    add_dims:
+      techs: nuclear
+
+nodes:
+  BEL.techs.nuclear:
+  BGR.techs.nuclear:
+  CHE.techs.nuclear:
+  ESP.techs.nuclear:
+  FIN.techs.nuclear:
+  FRA.techs.nuclear:
+  GBR.techs.nuclear:
+  HUN.techs.nuclear:
+  ROU.techs.nuclear:
+  SVK.techs.nuclear:
+  SVN.techs.nuclear:
+  SWE.techs.nuclear:

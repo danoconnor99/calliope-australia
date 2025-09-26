@@ -1,0 +1,148 @@
+techs:
+  biofuel_supply:
+    name: Biofuel supply stream
+    base_tech: supply
+    carrier_out: biofuel
+    include_storage: true
+    cost_flow_out:
+      data: 0.0018467195859461045 # (10,000 EUR/MWh)
+      index: monetary
+      dims: costs
+
+nodes:
+  ALB.techs.biofuel_supply:
+    source_use_max: 0.00700072425164891 # (100,000 MWh)
+    storage_cap_min: 30.663172222222222 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 30.663172222222222 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  AUT.techs.biofuel_supply:
+    source_use_max: 0.08640991406646374 # (100,000 MWh)
+    storage_cap_min: 378.4754236111111 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 378.4754236111111 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  BEL.techs.biofuel_supply:
+    source_use_max: 0.04537319983510908 # (100,000 MWh)
+    storage_cap_min: 198.73461527777778 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 198.73461527777778 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  BGR.techs.biofuel_supply:
+    source_use_max: 0.05035141108574328 # (100,000 MWh)
+    storage_cap_min: 220.5391805555556 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 220.5391805555556 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  BIH.techs.biofuel_supply:
+    source_use_max: 0.013695250190258752 # (100,000 MWh)
+    storage_cap_min: 59.985195833333336 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 59.985195833333336 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  CHE.techs.biofuel_supply:
+    source_use_max: 0.04593091926686961 # (100,000 MWh)
+    storage_cap_min: 201.1774263888889 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 201.1774263888889 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  CYP.techs.biofuel_supply:
+    source_use_max: 0.0018752771435819383 # (100,000 MWh)
+    storage_cap_min: 8.21371388888889 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 8.21371388888889 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  CZE.techs.biofuel_supply:
+    source_use_max: 0.08480064878234397 # (100,000 MWh)
+    storage_cap_min: 371.4268416666666 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 371.4268416666666 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  DEU.techs.biofuel_supply:
+    source_use_max: 0.38539530821917817 # (100,000 MWh)
+    storage_cap_min: 1688.0314500000002 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 1688.0314500000002 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  DNK.techs.biofuel_supply:
+    source_use_max: 0.038997966768138 # (100,000 MWh)
+    storage_cap_min: 170.81109444444445 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 170.81109444444445 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  ESP.techs.biofuel_supply:
+    source_use_max: 0.1506387160705226 # (100,000 MWh)
+    storage_cap_min: 659.797576388889 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 659.797576388889 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  EST.techs.biofuel_supply:
+    source_use_max: 0.032958125634195846 # (100,000 MWh)
+    storage_cap_min: 144.3565902777778 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 144.3565902777778 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  FIN.techs.biofuel_supply:
+    source_use_max: 0.14590464453323182 # (100,000 MWh)
+    storage_cap_min: 639.0623430555554 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 639.0623430555554 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  FRA.techs.biofuel_supply:
+    source_use_max: 0.35480820173769667 # (100,000 MWh)
+    storage_cap_min: 1554.0599236111116 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 1554.0599236111116 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  GBR.techs.biofuel_supply:
+    source_use_max: 0.1129153735836803 # (100,000 MWh)
+    storage_cap_min: 494.5693362965197 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 494.5693362965197 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  GRC.techs.biofuel_supply:
+    source_use_max: 0.01848400653221715 # (100,000 MWh)
+    storage_cap_min: 80.9599486111111 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 80.9599486111111 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  HRV.techs.biofuel_supply:
+    source_use_max: 0.019392066210045668 # (100,000 MWh)
+    storage_cap_min: 84.93725000000002 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 84.93725000000002 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  HUN.techs.biofuel_supply:
+    source_use_max: 0.07043685787671232 # (100,000 MWh)
+    storage_cap_min: 308.5134375 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 308.5134375 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  IRL.techs.biofuel_supply:
+    source_use_max: 0.016239208523592088 # (100,000 MWh)
+    storage_cap_min: 71.12773333333334 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 71.12773333333334 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  ITA.techs.biofuel_supply:
+    source_use_max: 0.14917318429731102 # (100,000 MWh)
+    storage_cap_min: 653.3785472222222 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 653.3785472222222 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  LTU.techs.biofuel_supply:
+    source_use_max: 0.031487659817351604 # (100,000 MWh)
+    storage_cap_min: 137.91595 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 137.91595 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  LUX.techs.biofuel_supply:
+    source_use_max: 0.0028868469051243025 # (100,000 MWh)
+    storage_cap_min: 12.644389444444444 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 12.644389444444444 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  LVA.techs.biofuel_supply:
+    source_use_max: 0.04530893455098934 # (100,000 MWh)
+    storage_cap_min: 198.4531333333333 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 198.4531333333333 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  MKD.techs.biofuel_supply:
+    source_use_max: 0.0038307864028411976 # (100,000 MWh)
+    storage_cap_min: 16.778844444444445 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 16.778844444444445 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  MNE.techs.biofuel_supply:
+    source_use_max: 0.0005272945205479451 # (100,000 MWh)
+    storage_cap_min: 2.3095499999999998 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 2.3095499999999998 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  NLD.techs.biofuel_supply:
+    source_use_max: 0.034943654236428215 # (100,000 MWh)
+    storage_cap_min: 153.05320555555556 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 153.05320555555556 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  NOR.techs.biofuel_supply:
+    source_use_max: 0.06987640347539321 # (100,000 MWh)
+    storage_cap_min: 306.05864722222225 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 306.05864722222225 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  POL.techs.biofuel_supply:
+    source_use_max: 0.199641981861999 # (100,000 MWh)
+    storage_cap_min: 874.4318805555556 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 874.4318805555556 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  PRT.techs.biofuel_supply:
+    source_use_max: 0.042740697932521554 # (100,000 MWh)
+    storage_cap_min: 187.2042569444444 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 187.2042569444444 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  ROU.techs.biofuel_supply:
+    source_use_max: 0.12610655219431763 # (100,000 MWh)
+    storage_cap_min: 552.3466986111112 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 552.3466986111112 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  SRB.techs.biofuel_supply:
+    source_use_max: 0.031527585616438356 # (100,000 MWh)
+    storage_cap_min: 138.09082500000002 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 138.09082500000002 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  SVK.techs.biofuel_supply:
+    source_use_max: 0.038419927701674274 # (100,000 MWh)
+    storage_cap_min: 168.27928333333332 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 168.27928333333332 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  SVN.techs.biofuel_supply:
+    source_use_max: 0.02751402048452562 # (100,000 MWh)
+    storage_cap_min: 120.51140972222221 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 120.51140972222221 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+  SWE.techs.biofuel_supply:
+    source_use_max: 0.2383789022070015 # (100,000 MWh)
+    storage_cap_min: 1044.0995916666666 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range
+    storage_cap_max: 1044.0995916666666 # (100,000 MWh) (0.5x annual yield) # ASSUME < 1 for numerical range

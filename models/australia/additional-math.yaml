@@ -1,0 +1,6 @@
+constraints:
+  emissions_limits:
+    description: >
+      Limit total emissions to 0
+    equations:
+      - expression: sum(cost[costs=emissions], over=[techs, nodes]) <= 0

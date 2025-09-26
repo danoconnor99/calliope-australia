@@ -1,0 +1,497 @@
+templates:
+  pv_on_roof:  # from [@JRC:2014] Table 9
+    name: Roof mounted PV
+    template: interest_rate
+    carrier_out: electricity
+    base_tech: supply
+    source_unit: per_cap
+    lifetime: 25
+    cost_flow_cap:
+      data: 88.0 # (10,000 EUR2013/MW)
+      index: monetary
+      dims: costs
+    cost_om_annual:
+      data: 1.6382360000000002 # (10,000 EUR2013/MW) 2% of CAPEX
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.0001 # (10,000 EUR2013/MW) stolen from om_annual for technical reasons
+      index: monetary
+      dims: costs
+
+
+techs:
+  roof_mounted_pv:
+    template: pv_on_roof
+
+data_tables:
+  capacityfactors_rooftop_pv:
+    data: timeseries/supply/capacityfactors-rooftop-pv.csv
+    rows: timesteps
+    columns: nodes
+    add_dims:
+      techs: roof_mounted_pv
+      parameters: source_use_max
+
+overrides:
+  dea_renewable_cost_pv_roof_mounted: # from [@DEA:2020a]
+    templates.pv_on_roof: #  Sheet 22 - Photovoltaics Small (last updated 2016)
+      lifetime: 40 # inverter lifetime is shorter but the replacement cost is included in O&M
+      cost_flow_cap:
+        data: 58.75 # (10,000 EUR2015/MW)
+        index: monetary
+        dims: costs
+      cost_om_annual:
+        data: 0.791736 # (10,000 EUR2015/MW)
+        index: monetary
+        dims: costs
+      cost_flow_out:
+        data: 0.0001 # (10,000 EUR2015/MW) stolen from om_annual for technical reasons
+        index: monetary
+        dims: costs
+
+  directional_rooftop_pv:
+    techs:
+      roof_mounted_pv_s_flat:
+        name: Roof mounted PV south-facing and flat
+        template: pv_on_roof
+      roof_mounted_pv_n:
+        name: Roof mounted PV north-facing
+        template: pv_on_roof
+      roof_mounted_pv_e_w:
+        name: Roof mounted PV east-facing and west-facing
+        template: pv_on_roof
+      data_tables:
+        capacityfactors_rooftop_pv_s_flat:
+          data: timeseries/supply/capacityfactors-rooftop-pv-s-flat.csv
+          rows: timesteps
+          columns: nodes
+          add_dims:
+            techs: roof_mounted_pv_s_flat
+            parameters: source_use_max
+        capacityfactors_rooftop_pv_n:
+          data: timeseries/supply/capacityfactors-rooftop-pv-n.csv
+          rows: timesteps
+          columns: nodes
+          add_dims:
+            techs: roof_mounted_pv_n
+            parameters: source_use_max
+        capacityfactors_rooftop_pv_e_w:
+          data: timeseries/supply/capacityfactors-rooftop-pv-e-w.csv
+          rows: timesteps
+          columns: nodes
+          add_dims:
+            techs: roof_mounted_pv_e_w
+            parameters: source_use_max
+
+    nodes:
+      AUT.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.3132048503501647 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.17084755721592593 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.3141451230921346 # (100,000 MW)
+      BEL.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.3643332425780956 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.198737166545902 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.36542700794158434 # (100,000 MW)
+      BGR.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.2994519568829759 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.16334560361944378 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.300350942043237 # (100,000 MW)
+      HRV.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.25430744479400014 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.13872009222176468 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.25507090154811 # (100,000 MW)
+      CYP.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.07828465025518634 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.04270285485249883 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.07851966871887649 # (100,000 MW)
+      CZE.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.3754181329824358 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.20478377292977662 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.37654517631171364 # (100,000 MW)
+      DNK.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.26283927350221087 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.1433740498209298 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.26362834367183624 # (100,000 MW)
+      EST.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.05799470792799368 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.03163505983343276 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.058168813925976254 # (100,000 MW)
+      FIN.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.21338247343372424 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.11639626365328039 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.21402306927111164 # (100,000 MW)
+      FRA.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 2.9278151483874555 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 1.5970699863764657 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 2.9366047465513327 # (100,000 MW)
+      DEU.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 2.9287048762501056 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 1.5975553167656689 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 2.9374971454673084 # (100,000 MW)
+      GRC.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.3005755069362414 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.16395847976678193 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.3014778651077702 # (100,000 MW)
+      HUN.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.3843812833922806 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.2096730086832104 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.38553523500858883 # (100,000 MW)
+      IRL.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.1407561686301913 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.07677993347374888 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.14117873293109248 # (100,000 MW)
+      ITA.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 1.6094064340256227 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.8779019785723676 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 1.6142380354486954 # (100,000 MW)
+      LVA.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.0707285699870186 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.03858115030513743 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.07094090433102045 # (100,000 MW)
+      LTU.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.13594521367262924 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.07415564492439727 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.13635333499857527 # (100,000 MW)
+      LUX.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.019081773477451172 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.010408760855157241 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.019139058897677686 # (100,000 MW)
+      NLD.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.6077311223950742 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.33150628922000897 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.6095555928916069 # (100,000 MW)
+      POL.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 1.013622406839101 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.5529126127969518 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 1.0166654041577414 # (100,000 MW)
+      PRT.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.46378229008879257 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.25298481569838965 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.4651746115841056 # (100,000 MW)
+      ROU.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.7036701766698558 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.38383930081330775 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.7057826659423563 # (100,000 MW)
+      SVK.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.21097287945756152 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.11508187390404966 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.21160624144932846 # (100,000 MW)
+      SVN.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.08657515934281852 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.04722517698165755 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.08683506675603624 # (100,000 MW)
+      ESP.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.9774774532053288 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.5331961970801808 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.9804119397054948 # (100,000 MW)
+      SWE.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.29829286032708263 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.16271333750054312 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.29918836576186825 # (100,000 MW)
+      GBR.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 1.4438143491511348 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.787574503874996 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 1.4481488263326152 # (100,000 MW)
+      ALB.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.05400987023669365 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.02946140324829552 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.054172013347581364 # (100,000 MW)
+      BIH.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.14665943267852655 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.0800000567928198 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.14709971917711118 # (100,000 MW)
+      MKD.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.04249590365900347 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.023180743605046326 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.0426234806738909 # (100,000 MW)
+      MNE.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.027261784001709588 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.014870808024949361 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.027343626643564017 # (100,000 MW)
+      NOR.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.11326442710303006 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.0617836877953184 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.11360445840625141 # (100,000 MW)
+      SRB.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.3118583927657164 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.17011308905893327 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.3127946233053913 # (100,000 MW)
+      CHE.techs:
+        roof_mounted_pv.active: False
+        roof_mounted_pv_s_flat:
+          flow_cap_max: 0.23429041190021185 # (100,000 MW)
+        roof_mounted_pv_n:
+          flow_cap_max: 0.12780116434184477 # (100,000 MW)
+        roof_mounted_pv_e_w:
+          flow_cap_max: 0.23499377549042563 # (100,000 MW)
+
+nodes:
+  AUT:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.7982915579324222 # (100,000 MW)
+  BEL:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.9286067936019309 # (100,000 MW)
+  BGR:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.7632384010616827 # (100,000 MW)
+  HRV:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.6481747842392858 # (100,000 MW)
+  CYP:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.19953067567293067 # (100,000 MW)
+  CZE:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.9568597865568539 # (100,000 MW)
+  DNK:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.6699205740119394 # (100,000 MW)
+  EST:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.14781599228720094 # (100,000 MW)
+  FIN:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.543865865941855 # (100,000 MW)
+  FRA:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 7.462368841131641 # (100,000 MW)
+  DEU:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 7.464636565404803 # (100,000 MW)
+  GRC:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.7661020876279464 # (100,000 MW)
+  HUN:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.9797049222457107 # (100,000 MW)
+  IRL:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.3587570914651228 # (100,000 MW)
+  ITA:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 4.102029608188992 # (100,000 MW)
+  LVA:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.18027185805757667 # (100,000 MW)
+  LTU:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.3464950057281964 # (100,000 MW)
+  LUX:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.04863532177230875 # (100,000 MW)
+  NLD:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 1.5489754515563432 # (100,000 MW)
+  POL:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 2.5835047235256585 # (100,000 MW)
+  PRT:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 1.182080949520819 # (100,000 MW)
+  ROU:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 1.79350339235277 # (100,000 MW)
+  SVK:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.5377243310101163 # (100,000 MW)
+  SVN:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.22066139382183408 # (100,000 MW)
+  ESP:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 2.4913790386410213 # (100,000 MW)
+  SWE:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.7602841141329725 # (100,000 MW)
+  GBR:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 3.6799711270768936 # (100,000 MW)
+  ALB:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.1376595011436593 # (100,000 MW)
+  BIH:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.37380323729831605 # (100,000 MW)
+  MKD:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.10831288563942944 # (100,000 MW)
+  MNE:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.06948440293440841 # (100,000 MW)
+  NOR:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.28868657643492196 # (100,000 MW)
+  SRB:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.7948597281840085 # (100,000 MW)
+  CHE:
+    techs:
+      roof_mounted_pv:
+        flow_cap_max: 0.5971556880915037 # (100,000 MW)

@@ -1,0 +1,50 @@
+techs:
+  historic_electrified_heat:
+    name: Removes historic electrified heat demand from the electricity demand profile
+    base_tech: supply
+    carrier_out: electricity
+
+data_tables:
+  historic_electrified_heat:
+    data: timeseries/supply/historic-electrified-heat.csv
+    rows: timesteps
+    columns: nodes
+    add_dims:
+      techs: historic_electrified_heat
+      parameters: source_use_equals
+
+nodes:
+  AUT.techs.historic_electrified_heat:
+  BEL.techs.historic_electrified_heat:
+  BGR.techs.historic_electrified_heat:
+  HRV.techs.historic_electrified_heat:
+  CYP.techs.historic_electrified_heat:
+  CZE.techs.historic_electrified_heat:
+  DNK.techs.historic_electrified_heat:
+  EST.techs.historic_electrified_heat:
+  FIN.techs.historic_electrified_heat:
+  FRA.techs.historic_electrified_heat:
+  DEU.techs.historic_electrified_heat:
+  GRC.techs.historic_electrified_heat:
+  HUN.techs.historic_electrified_heat:
+  IRL.techs.historic_electrified_heat:
+  ITA.techs.historic_electrified_heat:
+  LVA.techs.historic_electrified_heat:
+  LTU.techs.historic_electrified_heat:
+  LUX.techs.historic_electrified_heat:
+  NLD.techs.historic_electrified_heat:
+  POL.techs.historic_electrified_heat:
+  PRT.techs.historic_electrified_heat:
+  ROU.techs.historic_electrified_heat:
+  SVK.techs.historic_electrified_heat:
+  SVN.techs.historic_electrified_heat:
+  ESP.techs.historic_electrified_heat:
+  SWE.techs.historic_electrified_heat:
+  GBR.techs.historic_electrified_heat:
+  ALB.techs.historic_electrified_heat:
+  BIH.techs.historic_electrified_heat:
+  MKD.techs.historic_electrified_heat:
+  MNE.techs.historic_electrified_heat:
+  NOR.techs.historic_electrified_heat:
+  SRB.techs.historic_electrified_heat:
+  CHE.techs.historic_electrified_heat:

@@ -1,0 +1,17 @@
+techs:
+  geothermal:
+    name: "Traditional geothermal energy"
+    color: "#873737"
+    base_tech: supply
+    carrier_out: electricity
+    lifetime: 50
+
+    cost_flow_cap:
+      data: 406.2       #10000 EUR2010/MW (normalized from 2022 USD IRENA cost for Italy)
+      index: monetary
+      dims: costs
+
+    cost_om_annual:
+      data: 7.7         #10000 EUR2010/MW/yr
+      index: monetary
+      dims: costs
