@@ -33,16 +33,16 @@ data_tables:
     add_dims:
       techs: nuclear
 
-nodes:
-  BEL.techs.nuclear:
-  BGR.techs.nuclear:
-  CHE.techs.nuclear:
-  ESP.techs.nuclear:
-  FIN.techs.nuclear:
-  FRA.techs.nuclear:
-  GBR.techs.nuclear:
-  HUN.techs.nuclear:
-  ROU.techs.nuclear:
-  SVK.techs.nuclear:
-  SVN.techs.nuclear:
-  SWE.techs.nuclear:
+# nodes:
+#   BEL.techs.nuclear:
+#   BGR.techs.nuclear:
+#   CHE.techs.nuclear:
+#   ESP.techs.nuclear:
+#   FIN.techs.nuclear:
+#   FRA.techs.nuclear:
+#   GBR.techs.nuclear:
+#   HUN.techs.nuclear:
+#   ROU.techs.nuclear:
+#   SVK.techs.nuclear:
+#   SVN.techs.nuclear:
+#   SWE.techs.nuclear:

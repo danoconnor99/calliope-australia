@@ -101,242 +101,242 @@ overrides:
         index: monetary
         dims: costs
 
-nodes:
-  AUT:
-    available_area: 0.9901891325175762  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 1.3716351054894926 # (100,000 MW)
-  BEL:
-    available_area: 0.505660929261148  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 0.37929329418152574 # (100,000 MW)
-  BGR:
-    available_area: 4.229789293817431  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 2.500357580932379 # (100,000 MW)
-  HRV:
-    available_area: 1.5714170529186726  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 1.30094700876534 # (100,000 MW)
-  CYP:
-    available_area: 0.19110726538673045  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 0.09304743173241616 # (100,000 MW)
-  CZE:
-    available_area: 2.608503835310787  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 2.037058151765168 # (100,000 MW)
-  DNK:
-    available_area: 1.5141335091006012  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 0.4174550234550238 # (100,000 MW)
-  EST:
-    available_area: 1.1926592203199864  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 1.7976725415146353 # (100,000 MW)
-  FIN:
-    available_area: 6.39184695792757  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 17.17006714946151 # (100,000 MW)
-  FRA:
-    available_area: 18.836329227971653  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 7.349661913521885 # (100,000 MW)
-  DEU:
-    available_area: 10.177031151822955  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 6.848223874034286 # (100,000 MW)
-  GRC:
-    available_area: 2.59455215972662  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 3.049412649009824 # (100,000 MW)
-  HUN:
-    available_area: 5.738868881130965  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 0.8872844353079796 # (100,000 MW)
-  IRL:
-    available_area: 2.843402394175157  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 1.1190888748258354 # (100,000 MW)
-  ITA:
-    available_area: 5.54588634313345  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 4.915612778645754 # (100,000 MW)
-  LVA:
-    available_area: 1.8350035148162396  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 2.515380805541277 # (100,000 MW)
-  LTU:
-    available_area: 2.347951113010943  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 1.684084521496892 # (100,000 MW)
-  LUX:
-    available_area: 0.06584526367783547  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 0.06528458710193634 # (100,000 MW)
-  NLD:
-    available_area: 0.7100553250186146  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 0.2511351869180799 # (100,000 MW)
-  POL:
-    available_area: 12.088150878301636  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 7.3203521144306665 # (100,000 MW)
-  PRT:
-    available_area: 2.815851220471412  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 1.4141937948632242 # (100,000 MW)
-  ROU:
-    available_area: 10.329986208049208  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 4.61243433318615 # (100,000 MW)
-  SVK:
-    available_area: 1.4179188544336707  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 1.3357547087943555 # (100,000 MW)
-  SVN:
-    available_area: 0.12869887369796634  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 0.5109469296890498 # (100,000 MW)
-  ESP:
-    available_area: 22.084553157162663  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 10.302146592419744 # (100,000 MW)
-  SWE:
-    available_area: 8.769085464120657  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 23.754378425393107 # (100,000 MW)
-  GBR:
-    available_area: 7.665340952340887  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 5.45919088857323 # (100,000 MW)
-  ALB:
-    available_area: 0.3359828991815448  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 0.6878038933342696 # (100,000 MW)
-  BIH:
-    available_area: 0.6891477758146822  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 1.5071459255713227 # (100,000 MW)
-  MKD:
-    available_area: 0.5285434569552541  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 0.7343393564152717 # (100,000 MW)
-  MNE:
-    available_area: 0.1236088920980692  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 0.38640363107860093 # (100,000 MW)
-  NOR:
-    available_area: 10.231559267572313  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 11.329644592402131 # (100,000 MW)
-  SRB:
-    available_area: 2.5808479090698064  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 1.443460135783553 # (100,000 MW)
-  CHE:
-    available_area: 0.14621623685881496  # (10,000 km2) usable by onshore wind or open field pv
-    techs:
-      open_field_pv:
-      wind_onshore_competing:
-      wind_onshore_monopoly:
-        flow_cap_max: 0.39387030728101735 # (100,000 MW)
+# nodes:
+#   AUT:
+#     available_area: 0.9901891325175762  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 1.3716351054894926 # (100,000 MW)
+#   BEL:
+#     available_area: 0.505660929261148  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 0.37929329418152574 # (100,000 MW)
+#   BGR:
+#     available_area: 4.229789293817431  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 2.500357580932379 # (100,000 MW)
+#   HRV:
+#     available_area: 1.5714170529186726  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 1.30094700876534 # (100,000 MW)
+#   CYP:
+#     available_area: 0.19110726538673045  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 0.09304743173241616 # (100,000 MW)
+#   CZE:
+#     available_area: 2.608503835310787  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 2.037058151765168 # (100,000 MW)
+#   DNK:
+#     available_area: 1.5141335091006012  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 0.4174550234550238 # (100,000 MW)
+#   EST:
+#     available_area: 1.1926592203199864  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 1.7976725415146353 # (100,000 MW)
+#   FIN:
+#     available_area: 6.39184695792757  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 17.17006714946151 # (100,000 MW)
+#   FRA:
+#     available_area: 18.836329227971653  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 7.349661913521885 # (100,000 MW)
+#   DEU:
+#     available_area: 10.177031151822955  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 6.848223874034286 # (100,000 MW)
+#   GRC:
+#     available_area: 2.59455215972662  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 3.049412649009824 # (100,000 MW)
+#   HUN:
+#     available_area: 5.738868881130965  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 0.8872844353079796 # (100,000 MW)
+#   IRL:
+#     available_area: 2.843402394175157  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 1.1190888748258354 # (100,000 MW)
+#   ITA:
+#     available_area: 5.54588634313345  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 4.915612778645754 # (100,000 MW)
+#   LVA:
+#     available_area: 1.8350035148162396  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 2.515380805541277 # (100,000 MW)
+#   LTU:
+#     available_area: 2.347951113010943  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 1.684084521496892 # (100,000 MW)
+#   LUX:
+#     available_area: 0.06584526367783547  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 0.06528458710193634 # (100,000 MW)
+#   NLD:
+#     available_area: 0.7100553250186146  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 0.2511351869180799 # (100,000 MW)
+#   POL:
+#     available_area: 12.088150878301636  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 7.3203521144306665 # (100,000 MW)
+#   PRT:
+#     available_area: 2.815851220471412  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 1.4141937948632242 # (100,000 MW)
+#   ROU:
+#     available_area: 10.329986208049208  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 4.61243433318615 # (100,000 MW)
+#   SVK:
+#     available_area: 1.4179188544336707  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 1.3357547087943555 # (100,000 MW)
+#   SVN:
+#     available_area: 0.12869887369796634  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 0.5109469296890498 # (100,000 MW)
+#   ESP:
+#     available_area: 22.084553157162663  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 10.302146592419744 # (100,000 MW)
+#   SWE:
+#     available_area: 8.769085464120657  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 23.754378425393107 # (100,000 MW)
+#   GBR:
+#     available_area: 7.665340952340887  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 5.45919088857323 # (100,000 MW)
+#   ALB:
+#     available_area: 0.3359828991815448  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 0.6878038933342696 # (100,000 MW)
+#   BIH:
+#     available_area: 0.6891477758146822  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 1.5071459255713227 # (100,000 MW)
+#   MKD:
+#     available_area: 0.5285434569552541  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 0.7343393564152717 # (100,000 MW)
+#   MNE:
+#     available_area: 0.1236088920980692  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 0.38640363107860093 # (100,000 MW)
+#   NOR:
+#     available_area: 10.231559267572313  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 11.329644592402131 # (100,000 MW)
+#   SRB:
+#     available_area: 2.5808479090698064  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 1.443460135783553 # (100,000 MW)
+#   CHE:
+#     available_area: 0.14621623685881496  # (10,000 km2) usable by onshore wind or open field pv
+#     techs:
+#       open_field_pv:
+#       wind_onshore_competing:
+#       wind_onshore_monopoly:
+#         flow_cap_max: 0.39387030728101735 # (100,000 MW)

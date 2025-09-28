@@ -32,279 +32,279 @@ overrides:
     techs.pumped_hydro:
       cost_storage_cap.data: 0
       cost_flow_cap.data: 0
-  freeze_hydro_storage_capacities:
-    nodes:
-        AUT.techs:
-          pumped_hydro:
-            flow_cap_min: 0.035893 # (100,000 MW)
-            storage_cap_min: 7.0101744186046515 # (100,000 MWh)
-        BEL.techs:
-          pumped_hydro:
-            flow_cap_min: 0.013080000000000001 # (100,000 MW)
-            storage_cap_min: 0.057100000000000005 # (100,000 MWh)
-        BGR.techs:
-          pumped_hydro:
-            flow_cap_min: 0.01399 # (100,000 MW)
-            storage_cap_min: 0.41130000000000005 # (100,000 MWh)
-        HRV.techs:
-          pumped_hydro:
-            flow_cap_min: 0.005187000000000001 # (100,000 MW)
-            storage_cap_min: 0.2781434782608696 # (100,000 MWh)
-        CYP.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0 # (100,000 MW)
-            storage_cap_min: 0.0 # (100,000 MWh)
-        CZE.techs:
-          pumped_hydro:
-            flow_cap_min: 0.011725095516678392 # (100,000 MW)
-            storage_cap_min: 0.05618274935075062 # (100,000 MWh)
-        DNK.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0 # (100,000 MW)
-            storage_cap_min: 0.0 # (100,000 MWh)
-        EST.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0 # (100,000 MW)
-            storage_cap_min: 0.0 # (100,000 MWh)
-        FIN.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0 # (100,000 MW)
-            storage_cap_min: 0.0 # (100,000 MWh)
-        FRA.techs:
-          pumped_hydro:
-            flow_cap_min: 0.050640000000000004 # (100,000 MW)
-            storage_cap_min: 0.827455516089109 # (100,000 MWh)
-        DEU.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0658972 # (100,000 MW)
-            storage_cap_min: 0.39654737276422763 # (100,000 MWh)
-        GRC.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0069900000000000006 # (100,000 MW)
-            storage_cap_min: 0.0514 # (100,000 MWh)
-        HUN.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0 # (100,000 MW)
-            storage_cap_min: 0.0 # (100,000 MWh)
-        IRL.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0029200000000000003 # (100,000 MW)
-            storage_cap_min: 0.018000000000000002 # (100,000 MWh)
-        ITA.techs:
-          pumped_hydro:
-            flow_cap_min: 0.079626 # (100,000 MW)
-            storage_cap_min: 4.136195000000001 # (100,000 MWh)
-        LVA.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0 # (100,000 MW)
-            storage_cap_min: 0.0 # (100,000 MWh)
-        LTU.techs:
-          pumped_hydro:
-            flow_cap_min: 0.009000000000000001 # (100,000 MW)
-            storage_cap_min: 0.10800000000000001 # (100,000 MWh)
-        LUX.techs:
-          pumped_hydro:
-            flow_cap_min: 0.012910000000000001 # (100,000 MW)
-            storage_cap_min: 0.04478 # (100,000 MWh)
-        NLD.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0 # (100,000 MW)
-            storage_cap_min: 0.0 # (100,000 MWh)
-        POL.techs:
-          pumped_hydro:
-            flow_cap_min: 0.017050000000000003 # (100,000 MW)
-            storage_cap_min: 0.1569 # (100,000 MWh)
-        PRT.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0364 # (100,000 MW)
-            storage_cap_min: 5.11576103896104 # (100,000 MWh)
-        ROU.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0 # (100,000 MW)
-            storage_cap_min: 0.0 # (100,000 MWh)
-        SVK.techs:
-          pumped_hydro:
-            flow_cap_min: 0.010212800000000001 # (100,000 MW)
-            storage_cap_min: 0.11234079999999999 # (100,000 MWh)
-        SVN.techs:
-          pumped_hydro:
-            flow_cap_min: 0.00185 # (100,000 MW)
-            storage_cap_min: 0.02035 # (100,000 MWh)
-        ESP.techs:
-          pumped_hydro:
-            flow_cap_min: 0.07823272 # (100,000 MW)
-            storage_cap_min: 40.22348641534721 # (100,000 MWh)
-        SWE.techs:
-          pumped_hydro:
-            flow_cap_min: 0.00092 # (100,000 MW)
-            storage_cap_min: 1.8430666666666664 # (100,000 MWh)
-        GBR.techs:
-          pumped_hydro:
-            flow_cap_min: 0.029050000000000003 # (100,000 MW)
-            storage_cap_min: 0.2543 # (100,000 MWh)
-        ALB.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0 # (100,000 MW)
-            storage_cap_min: 0.0 # (100,000 MWh)
-        BIH.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0043 # (100,000 MW)
-            storage_cap_min: 3.4e-05 # (100,000 MWh)
-        MKD.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0 # (100,000 MW)
-            storage_cap_min: 0.0 # (100,000 MWh)
-        MNE.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0 # (100,000 MW)
-            storage_cap_min: 0.0 # (100,000 MWh)
-        NOR.techs:
-          pumped_hydro:
-            flow_cap_min: 0.013443 # (100,000 MW)
-            storage_cap_min: 49.529217 # (100,000 MWh)
-        SRB.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0061400000000000005 # (100,000 MW)
-            storage_cap_min: 0.06754 # (100,000 MWh)
-        CHE.techs:
-          pumped_hydro:
-            flow_cap_min: 0.0495705 # (100,000 MW)
-            storage_cap_min: 5.79339009541749 # (100,000 MWh)
+#   freeze_hydro_storage_capacities:
+#     nodes:
+#         AUT.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.035893 # (100,000 MW)
+#             storage_cap_min: 7.0101744186046515 # (100,000 MWh)
+#         BEL.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.013080000000000001 # (100,000 MW)
+#             storage_cap_min: 0.057100000000000005 # (100,000 MWh)
+#         BGR.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.01399 # (100,000 MW)
+#             storage_cap_min: 0.41130000000000005 # (100,000 MWh)
+#         HRV.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.005187000000000001 # (100,000 MW)
+#             storage_cap_min: 0.2781434782608696 # (100,000 MWh)
+#         CYP.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0 # (100,000 MW)
+#             storage_cap_min: 0.0 # (100,000 MWh)
+#         CZE.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.011725095516678392 # (100,000 MW)
+#             storage_cap_min: 0.05618274935075062 # (100,000 MWh)
+#         DNK.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0 # (100,000 MW)
+#             storage_cap_min: 0.0 # (100,000 MWh)
+#         EST.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0 # (100,000 MW)
+#             storage_cap_min: 0.0 # (100,000 MWh)
+#         FIN.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0 # (100,000 MW)
+#             storage_cap_min: 0.0 # (100,000 MWh)
+#         FRA.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.050640000000000004 # (100,000 MW)
+#             storage_cap_min: 0.827455516089109 # (100,000 MWh)
+#         DEU.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0658972 # (100,000 MW)
+#             storage_cap_min: 0.39654737276422763 # (100,000 MWh)
+#         GRC.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0069900000000000006 # (100,000 MW)
+#             storage_cap_min: 0.0514 # (100,000 MWh)
+#         HUN.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0 # (100,000 MW)
+#             storage_cap_min: 0.0 # (100,000 MWh)
+#         IRL.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0029200000000000003 # (100,000 MW)
+#             storage_cap_min: 0.018000000000000002 # (100,000 MWh)
+#         ITA.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.079626 # (100,000 MW)
+#             storage_cap_min: 4.136195000000001 # (100,000 MWh)
+#         LVA.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0 # (100,000 MW)
+#             storage_cap_min: 0.0 # (100,000 MWh)
+#         LTU.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.009000000000000001 # (100,000 MW)
+#             storage_cap_min: 0.10800000000000001 # (100,000 MWh)
+#         LUX.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.012910000000000001 # (100,000 MW)
+#             storage_cap_min: 0.04478 # (100,000 MWh)
+#         NLD.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0 # (100,000 MW)
+#             storage_cap_min: 0.0 # (100,000 MWh)
+#         POL.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.017050000000000003 # (100,000 MW)
+#             storage_cap_min: 0.1569 # (100,000 MWh)
+#         PRT.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0364 # (100,000 MW)
+#             storage_cap_min: 5.11576103896104 # (100,000 MWh)
+#         ROU.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0 # (100,000 MW)
+#             storage_cap_min: 0.0 # (100,000 MWh)
+#         SVK.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.010212800000000001 # (100,000 MW)
+#             storage_cap_min: 0.11234079999999999 # (100,000 MWh)
+#         SVN.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.00185 # (100,000 MW)
+#             storage_cap_min: 0.02035 # (100,000 MWh)
+#         ESP.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.07823272 # (100,000 MW)
+#             storage_cap_min: 40.22348641534721 # (100,000 MWh)
+#         SWE.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.00092 # (100,000 MW)
+#             storage_cap_min: 1.8430666666666664 # (100,000 MWh)
+#         GBR.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.029050000000000003 # (100,000 MW)
+#             storage_cap_min: 0.2543 # (100,000 MWh)
+#         ALB.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0 # (100,000 MW)
+#             storage_cap_min: 0.0 # (100,000 MWh)
+#         BIH.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0043 # (100,000 MW)
+#             storage_cap_min: 3.4e-05 # (100,000 MWh)
+#         MKD.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0 # (100,000 MW)
+#             storage_cap_min: 0.0 # (100,000 MWh)
+#         MNE.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0 # (100,000 MW)
+#             storage_cap_min: 0.0 # (100,000 MWh)
+#         NOR.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.013443 # (100,000 MW)
+#             storage_cap_min: 49.529217 # (100,000 MWh)
+#         SRB.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0061400000000000005 # (100,000 MW)
+#             storage_cap_min: 0.06754 # (100,000 MWh)
+#         CHE.techs:
+#           pumped_hydro:
+#             flow_cap_min: 0.0495705 # (100,000 MW)
+#             storage_cap_min: 5.79339009541749 # (100,000 MWh)
 
-nodes:
-  AUT.techs:
-    pumped_hydro:
-      flow_cap_max: 0.035893 # (100,000 MW)
-      storage_cap_max: 7.0101744186046515 # (100,000 MWh)
-  BEL.techs:
-    pumped_hydro:
-      flow_cap_max: 0.013080000000000001 # (100,000 MW)
-      storage_cap_max: 0.057100000000000005 # (100,000 MWh)
-  BGR.techs:
-    pumped_hydro:
-      flow_cap_max: 0.01399 # (100,000 MW)
-      storage_cap_max: 0.41130000000000005 # (100,000 MWh)
-  HRV.techs:
-    pumped_hydro:
-      flow_cap_max: 0.005187000000000001 # (100,000 MW)
-      storage_cap_max: 0.2781434782608696 # (100,000 MWh)
-  CYP.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0 # (100,000 MW)
-      storage_cap_max: 0.0 # (100,000 MWh)
-  CZE.techs:
-    pumped_hydro:
-      flow_cap_max: 0.011725095516678392 # (100,000 MW)
-      storage_cap_max: 0.05618274935075062 # (100,000 MWh)
-  DNK.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0 # (100,000 MW)
-      storage_cap_max: 0.0 # (100,000 MWh)
-  EST.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0 # (100,000 MW)
-      storage_cap_max: 0.0 # (100,000 MWh)
-  FIN.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0 # (100,000 MW)
-      storage_cap_max: 0.0 # (100,000 MWh)
-  FRA.techs:
-    pumped_hydro:
-      flow_cap_max: 0.050640000000000004 # (100,000 MW)
-      storage_cap_max: 0.827455516089109 # (100,000 MWh)
-  DEU.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0658972 # (100,000 MW)
-      storage_cap_max: 0.39654737276422763 # (100,000 MWh)
-  GRC.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0069900000000000006 # (100,000 MW)
-      storage_cap_max: 0.0514 # (100,000 MWh)
-  HUN.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0 # (100,000 MW)
-      storage_cap_max: 0.0 # (100,000 MWh)
-  IRL.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0029200000000000003 # (100,000 MW)
-      storage_cap_max: 0.018000000000000002 # (100,000 MWh)
-  ITA.techs:
-    pumped_hydro:
-      flow_cap_max: 0.079626 # (100,000 MW)
-      storage_cap_max: 4.136195000000001 # (100,000 MWh)
-  LVA.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0 # (100,000 MW)
-      storage_cap_max: 0.0 # (100,000 MWh)
-  LTU.techs:
-    pumped_hydro:
-      flow_cap_max: 0.009000000000000001 # (100,000 MW)
-      storage_cap_max: 0.10800000000000001 # (100,000 MWh)
-  LUX.techs:
-    pumped_hydro:
-      flow_cap_max: 0.012910000000000001 # (100,000 MW)
-      storage_cap_max: 0.04478 # (100,000 MWh)
-  NLD.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0 # (100,000 MW)
-      storage_cap_max: 0.0 # (100,000 MWh)
-  POL.techs:
-    pumped_hydro:
-      flow_cap_max: 0.017050000000000003 # (100,000 MW)
-      storage_cap_max: 0.1569 # (100,000 MWh)
-  PRT.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0364 # (100,000 MW)
-      storage_cap_max: 5.11576103896104 # (100,000 MWh)
-  ROU.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0 # (100,000 MW)
-      storage_cap_max: 0.0 # (100,000 MWh)
-  SVK.techs:
-    pumped_hydro:
-      flow_cap_max: 0.010212800000000001 # (100,000 MW)
-      storage_cap_max: 0.11234079999999999 # (100,000 MWh)
-  SVN.techs:
-    pumped_hydro:
-      flow_cap_max: 0.00185 # (100,000 MW)
-      storage_cap_max: 0.02035 # (100,000 MWh)
-  ESP.techs:
-    pumped_hydro:
-      flow_cap_max: 0.07823272 # (100,000 MW)
-      storage_cap_max: 40.22348641534721 # (100,000 MWh)
-  SWE.techs:
-    pumped_hydro:
-      flow_cap_max: 0.00092 # (100,000 MW)
-      storage_cap_max: 1.8430666666666664 # (100,000 MWh)
-  GBR.techs:
-    pumped_hydro:
-      flow_cap_max: 0.029050000000000003 # (100,000 MW)
-      storage_cap_max: 0.2543 # (100,000 MWh)
-  ALB.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0 # (100,000 MW)
-      storage_cap_max: 0.0 # (100,000 MWh)
-  BIH.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0043 # (100,000 MW)
-      storage_cap_max: 3.4e-05 # (100,000 MWh)
-  MKD.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0 # (100,000 MW)
-      storage_cap_max: 0.0 # (100,000 MWh)
-  MNE.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0 # (100,000 MW)
-      storage_cap_max: 0.0 # (100,000 MWh)
-  NOR.techs:
-    pumped_hydro:
-      flow_cap_max: 0.013443 # (100,000 MW)
-      storage_cap_max: 49.529217 # (100,000 MWh)
-  SRB.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0061400000000000005 # (100,000 MW)
-      storage_cap_max: 0.06754 # (100,000 MWh)
-  CHE.techs:
-    pumped_hydro:
-      flow_cap_max: 0.0495705 # (100,000 MW)
-      storage_cap_max: 5.79339009541749 # (100,000 MWh)
+# nodes:
+#   AUT.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.035893 # (100,000 MW)
+#       storage_cap_max: 7.0101744186046515 # (100,000 MWh)
+#   BEL.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.013080000000000001 # (100,000 MW)
+#       storage_cap_max: 0.057100000000000005 # (100,000 MWh)
+#   BGR.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.01399 # (100,000 MW)
+#       storage_cap_max: 0.41130000000000005 # (100,000 MWh)
+#   HRV.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.005187000000000001 # (100,000 MW)
+#       storage_cap_max: 0.2781434782608696 # (100,000 MWh)
+#   CYP.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0 # (100,000 MW)
+#       storage_cap_max: 0.0 # (100,000 MWh)
+#   CZE.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.011725095516678392 # (100,000 MW)
+#       storage_cap_max: 0.05618274935075062 # (100,000 MWh)
+#   DNK.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0 # (100,000 MW)
+#       storage_cap_max: 0.0 # (100,000 MWh)
+#   EST.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0 # (100,000 MW)
+#       storage_cap_max: 0.0 # (100,000 MWh)
+#   FIN.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0 # (100,000 MW)
+#       storage_cap_max: 0.0 # (100,000 MWh)
+#   FRA.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.050640000000000004 # (100,000 MW)
+#       storage_cap_max: 0.827455516089109 # (100,000 MWh)
+#   DEU.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0658972 # (100,000 MW)
+#       storage_cap_max: 0.39654737276422763 # (100,000 MWh)
+#   GRC.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0069900000000000006 # (100,000 MW)
+#       storage_cap_max: 0.0514 # (100,000 MWh)
+#   HUN.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0 # (100,000 MW)
+#       storage_cap_max: 0.0 # (100,000 MWh)
+#   IRL.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0029200000000000003 # (100,000 MW)
+#       storage_cap_max: 0.018000000000000002 # (100,000 MWh)
+#   ITA.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.079626 # (100,000 MW)
+#       storage_cap_max: 4.136195000000001 # (100,000 MWh)
+#   LVA.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0 # (100,000 MW)
+#       storage_cap_max: 0.0 # (100,000 MWh)
+#   LTU.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.009000000000000001 # (100,000 MW)
+#       storage_cap_max: 0.10800000000000001 # (100,000 MWh)
+#   LUX.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.012910000000000001 # (100,000 MW)
+#       storage_cap_max: 0.04478 # (100,000 MWh)
+#   NLD.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0 # (100,000 MW)
+#       storage_cap_max: 0.0 # (100,000 MWh)
+#   POL.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.017050000000000003 # (100,000 MW)
+#       storage_cap_max: 0.1569 # (100,000 MWh)
+#   PRT.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0364 # (100,000 MW)
+#       storage_cap_max: 5.11576103896104 # (100,000 MWh)
+#   ROU.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0 # (100,000 MW)
+#       storage_cap_max: 0.0 # (100,000 MWh)
+#   SVK.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.010212800000000001 # (100,000 MW)
+#       storage_cap_max: 0.11234079999999999 # (100,000 MWh)
+#   SVN.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.00185 # (100,000 MW)
+#       storage_cap_max: 0.02035 # (100,000 MWh)
+#   ESP.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.07823272 # (100,000 MW)
+#       storage_cap_max: 40.22348641534721 # (100,000 MWh)
+#   SWE.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.00092 # (100,000 MW)
+#       storage_cap_max: 1.8430666666666664 # (100,000 MWh)
+#   GBR.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.029050000000000003 # (100,000 MW)
+#       storage_cap_max: 0.2543 # (100,000 MWh)
+#   ALB.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0 # (100,000 MW)
+#       storage_cap_max: 0.0 # (100,000 MWh)
+#   BIH.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0043 # (100,000 MW)
+#       storage_cap_max: 3.4e-05 # (100,000 MWh)
+#   MKD.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0 # (100,000 MW)
+#       storage_cap_max: 0.0 # (100,000 MWh)
+#   MNE.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0 # (100,000 MW)
+#       storage_cap_max: 0.0 # (100,000 MWh)
+#   NOR.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.013443 # (100,000 MW)
+#       storage_cap_max: 49.529217 # (100,000 MWh)
+#   SRB.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0061400000000000005 # (100,000 MW)
+#       storage_cap_max: 0.06754 # (100,000 MWh)
+#   CHE.techs:
+#     pumped_hydro:
+#       flow_cap_max: 0.0495705 # (100,000 MW)
+#       storage_cap_max: 5.79339009541749 # (100,000 MWh)

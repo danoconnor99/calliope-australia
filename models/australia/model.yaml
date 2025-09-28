@@ -21,9 +21,8 @@ import:
   - techs/storage/electricity.yaml
   - techs/storage/hydro.yaml
 
-  - techs/transmission/electricity-entsoe.yaml
+  # - techs/transmission/electricity-entsoe.yaml
 
-  # - techs/supply/load-shedding.yaml
 config:
   init:
     name: 'Model'

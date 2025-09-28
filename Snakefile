@@ -1,9 +1,9 @@
 configfile: "config/default.yaml"
 
 include: "rules/submodules.smk"
-
+include: "rules/build_nodes.smk"
 # include: "rules/land_area.smk"
-# include: "rules/build_nodes.smk"
+
 
 
 # include: "rules/rooftop_cf.smk"
@@ -55,7 +55,8 @@ include: "rules/submodules.smk"
 rule all:
     message: "Calliope Dataset"
     input:
-        "build/temp/shapes.parquet"
+        "build/temp/shapes.parquet",
+        "build/output/locations.yaml"
 #         #initial weather
 #         "build/temp/capacityfactors-open-field-pv.csv",
 #         "build/temp/capacityfactors-wind-onshore.csv",

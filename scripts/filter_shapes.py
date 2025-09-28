@@ -20,6 +20,18 @@ PARQUET = Path(snakemake.output[0])
 PNG = Path(snakemake.output[1])
 PARQUET.parent.mkdir(parents=True, exist_ok=True)
 
+# small mapping: state full name -> short code used in state_id
+ABBR = {
+    "Australian Capital Territory": "ACT",
+    "New South Wales": "NSW",
+    "Northern Territory": "NT",
+    "Queensland": "QLD",
+    "South Australia": "SA",
+    "Tasmania": "TAS",
+    "Victoria": "VIC",
+    "Western Australia": "WA",
+}
+
 # Load data
 g = gpd.read_parquet(INPUT)
 g.columns = [str(c) for c in g.columns]
@@ -28,7 +40,10 @@ g = g.set_crs(epsg=4326).to_crs(epsg=PROJECT_EPSG)
 
 # Generate state_id for land polygons
 land_gdf = g[g["shape_class"] == "land"].copy()
-land_gdf["state_id"] = land_gdf["shape_id"].str.split("_").str[-2]  # e.g., AUS.2
+# keep the full name too
+land_gdf["state_name"] = land_gdf["parent_name"]
+# set state_id as <CODE> using ABBR (fallback: first 3 letters uppercase)
+land_gdf["state_id"] = land_gdf["state_name"].map(lambda n: ABBR.get(n, "".join(w[0] for w in str(n).split())[:3].upper()))
 
 # EEZ rows
 eez_rows = g[g["parent_subtype"].astype(str).str.contains("eez", na=False)]
@@ -37,7 +52,7 @@ if eez_rows.empty:
 eez_union = eez_rows.unary_union
 g_noeez = g.drop(index=eez_rows.index)
 
-# Build mapping from parent_name -> state_id
+# Build mapping from parent_name -> state_id and numeric part
 state_map = dict(zip(land_gdf["parent_name"], land_gdf["state_id"]))
 num_map = {row["parent_name"]: row["shape_id"].split(".")[1] for _, row in land_gdf.iterrows()}
 
@@ -113,13 +128,17 @@ for i, region in enumerate(new_regions):
 vor_gdf = gpd.GeoDataFrame(polys, crs=g.crs)
 vor_by_state = vor_gdf.dissolve(by="parent_name", as_index=False)
 vor_by_state["shape_class"] = "maritime"
-vor_by_state["state_id"] = vor_by_state["parent_name"].map(state_map)
+# preserve full name
+vor_by_state["state_name"] = vor_by_state["parent_name"]
+# set <CODE>
+vor_by_state["state_id"] = vor_by_state["state_name"].map(lambda n: ABBR.get(n, "".join(w[0] for w in str(n).split())[:3].upper()))
+# keep numeric-based shape_id aligned with land
 vor_by_state["shape_id"] = vor_by_state["parent_name"].map(lambda n: f"AUS_marineregions.{num_map[n]}_1")
 vor_by_state["country_id"] = "AUS"
 
-# Keep only required columns
-vor_by_state = vor_by_state[["shape_id", "country_id", "state_id", "shape_class", "geometry"]]
-land_gdf = land_gdf[["shape_id", "country_id", "state_id", "shape_class", "geometry"]]
+# Keep only required columns (now including state_name)
+vor_by_state = vor_by_state[["shape_id", "country_id", "state_id", "state_name", "shape_class", "geometry"]]
+land_gdf = land_gdf[["shape_id", "country_id", "state_id", "state_name", "shape_class", "geometry"]]
 
 # Combine land + maritime
 final_gdf = pd.concat([land_gdf, vor_by_state], ignore_index=True)
